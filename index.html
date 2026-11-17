@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>AlarmX · Public synthetic query demo</title>
+  <link rel="stylesheet" href="css/workspace.css">
+  <link rel="stylesheet" href="windows-proof-guide/appearance.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/tabulator-browser-development.css">
+  <link rel="stylesheet" href="css/public-demo.css">
+  <script type="module" src="assets/main.js"></script>
+</head>
+<body>
+  <div data-public-demo>
+    <header class="workspace-header">
+      <button type="button" data-action="menu" aria-controls="public-menu" aria-expanded="false">Menu</button>
+      <h1>AlarmX query demos</h1>
+      <a href="s071-query-help.html" data-ui-log-id="public-header-help">Screenshot help</a>
+    </header>
+    <nav id="public-menu" data-public-menu hidden></nav>
+    <p class="public-demo-notice">Public static demo · synthetic data only · no AlarmX server or device connection. Do not enter private data. Query changes stay in this tab; appearance is stored in this browser.</p>
+    <nav class="public-demo-links" aria-label="Public demo pages">
+      <a href="tabulator-browser-development.html?demo=S07.1" data-ui-log-id="public-nav-editor">S07.1 editor</a>
+      <a href="tabulator-browser-development.html?demo=S07" data-ui-log-id="public-nav-original">Original S07</a>
+      <a href="s071-query-help.html" data-ui-log-id="public-nav-help">Screenshot help</a>
+    </nav>
+    <p data-development-error class="workspace-notice" role="alert" hidden></p>
+    <main class="tb-development"></main>
+  </div>
+  <noscript>This synthetic query editor requires JavaScript. No server API is available.</noscript>
+</body>
+</html>

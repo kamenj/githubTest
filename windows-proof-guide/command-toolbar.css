@@ -1,0 +1,49 @@
+.command-toolbar {
+  --toolbar-background: var(--html-tone-111b2b, #111b2b);
+  --toolbar-foreground: var(--html-tone-e7edf7, #e7edf7);
+  --toolbar-border: var(--html-tone-516078, #516078);
+  display: flex; align-items: center; gap: .35rem; box-sizing: border-box;
+  width: 100%; min-width: 0; max-width: 100%; padding: .25rem;
+  color: var(--toolbar-foreground); background: var(--toolbar-background);
+  border: 1px solid var(--toolbar-border); border-radius: .35rem;
+}
+.command-toolbar-commands { display: flex; align-items: center; gap: .25rem; min-width: 0; overflow: hidden; }
+.command-toolbar-utilities { display: flex; gap: .25rem; flex: 0 0 auto; margin-inline-start: auto; }
+.command-toolbar button {
+  box-sizing: border-box; flex: 0 0 auto; width: auto; min-width: 44px; min-height: 44px;
+  padding: .4rem .65rem; margin: 0; font: inherit; line-height: 1.2; white-space: nowrap;
+  color: inherit; background: transparent; border: 1px solid transparent; border-radius: .25rem;
+  cursor: pointer; touch-action: manipulation;
+}
+.command-toolbar button:hover:not(:disabled) { background: color-mix(in srgb, currentColor 12%, transparent); border-color: var(--toolbar-border); }
+.command-toolbar button:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
+.command-toolbar button[aria-pressed="true"] { border-color: currentColor; background: color-mix(in srgb, currentColor 18%, transparent); }
+.command-toolbar-button[aria-expanded="true"] { border-color: currentColor; }
+.command-toolbar-button:has(svg) { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; }
+.command-toolbar button svg { display: block; flex: 0 0 auto; }
+.command-toolbar-button[data-group-start] { position: relative; margin-inline-start: .45rem; }
+.command-toolbar-button[data-group-start]::before {
+  content: ''; position: absolute; inset-block: 22%; inset-inline-start: calc(-.25rem - 1.5px);
+  border-inline-start: 1px solid var(--toolbar-border); pointer-events: none;
+}
+.command-toolbar .command-toolbar-menuitem[data-group-start] { margin-top: .3rem; border-top-color: var(--toolbar-border); }
+.command-toolbar .command-toolbar-menuitem[aria-checked="true"]::after { content: ' \2713'; }
+.command-toolbar button:disabled { opacity: .5; cursor: default; }
+.command-toolbar [hidden] { display: none !important; }
+.command-toolbar-overflow {
+  box-sizing: border-box; width: min(28rem, calc(100vw - 1rem)); max-width: calc(100vw - 1rem);
+  max-height: calc(100dvh - 1rem); padding: .5rem; overflow: auto;
+  color: var(--toolbar-foreground); background: var(--toolbar-background);
+  border: 1px solid var(--toolbar-border); border-radius: .5rem;
+}
+.command-toolbar-overflow::backdrop { background: #0006; }
+.command-toolbar-menu { display: flex; flex-direction: column; gap: .25rem; }
+.command-toolbar .command-toolbar-menuitem { width: 100%; white-space: normal; overflow-wrap: anywhere; text-align: start; }
+.command-toolbar .command-toolbar-close { display: block; margin-inline-start: auto; margin-bottom: .5rem; }
+@media (max-width: 600px) {
+  .command-toolbar-overflow { margin: auto auto .5rem; }
+}
+@media (forced-colors: active) {
+  .command-toolbar { border-color: ButtonText; }
+  .command-toolbar button:disabled { color: GrayText; opacity: 1; }
+}

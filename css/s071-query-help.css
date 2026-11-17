@@ -1,0 +1,50 @@
+html { scroll-behavior: smooth; scroll-padding-top: 1rem; }
+.query-help-layout { display: grid; grid-template-columns: 16rem minmax(0, 1fr); gap: 2rem; max-width: 98rem; margin: auto; padding: 1.5rem; }
+.query-help-toc { position: sticky; top: 1rem; align-self: start; max-height: calc(100dvh - 2rem); overflow: auto; padding: 1rem; border: 1px solid var(--border, #526174); border-radius: .7rem; }
+.query-help-toc ol { padding-left: 1.4rem; }
+.query-help-toc li { margin: .55rem 0; }
+.query-help-layout a { color: var(--accent, #9dcfff); text-underline-offset: .18em; }
+.query-help-layout a:focus-visible { outline: 3px solid #ffcf66; outline-offset: 4px; }
+.query-help-layout main { min-width: 0; }
+.query-help-layout h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.15; }
+.query-help-layout h2 { font-size: 1.65rem; border-top: 2px solid var(--border, #526174); padding-top: 1.3rem; margin-top: 3rem; }
+.query-help-toc h2 { font-size: 1rem; border: 0; margin: 0; padding: 0; }
+.query-help-toc summary { min-height: 44px; align-content: center; cursor: pointer; font-weight: bold; }
+.query-help-layout h3 { font-size: 1.15rem; }
+.query-help-workflow-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 1.5rem 0; }
+.query-help-workflow-actions button { min-height: 44px; cursor: pointer; }
+.query-help-workflow { border-top: 2px solid var(--border, #526174); margin-top: 2rem; }
+.query-help-workflow > summary { padding: 1rem .25rem; min-height: 44px; cursor: pointer; }
+.query-help-workflow > summary h2 { display: inline; border: 0; margin: 0; padding: 0; }
+.query-help-workflow > summary:focus-visible, .query-help-workflow-actions button:focus-visible { outline: 3px solid #ffcf66; outline-offset: 4px; }
+.query-help-workflow-content { padding-bottom: 1rem; }
+.query-help-layout p, .query-help-layout li { line-height: 1.65; }
+.query-help-lead { font-size: 1.12rem; max-width: 65ch; }
+.query-help-note { padding: .8rem 1.1rem; border-left: 4px solid #ffcf66; background: color-mix(in srgb, #ffcf66 8%, transparent); }
+.query-help-steps { list-style: none; padding: 0; counter-reset: step; }
+.query-help-steps > li { counter-increment: step; margin: 1.8rem 0 2.5rem; }
+.query-help-steps h3::before { content: counter(step); display: inline-grid; place-items: center; background: #9dcfff; color: #142031; border-radius: 50%; width: 1.8rem; height: 1.8rem; margin-right: .6rem; }
+.query-help-layout figure { margin: .7rem 0; }
+.query-help-layout img { display: block; max-width: 100%; height: auto; border: 1px solid #526174; border-radius: .5rem; background: #101824; }
+.query-help-layout figcaption { margin-top: .5rem; font-size: .9rem; opacity: .85; }
+.query-help-layout code, .query-help-layout kbd { background: color-mix(in srgb, currentColor 9%, transparent); padding: .1rem .3rem; border-radius: .2rem; overflow-wrap: anywhere; }
+.query-help-layout kbd { border: 1px solid var(--border, #526174); white-space: nowrap; }
+.query-help-layout table { border-collapse: collapse; width: 100%; }
+.query-help-layout td, .query-help-layout th { text-align: left; padding: .65rem; border: 1px solid var(--border, #526174); }
+.query-help-layout footer { margin: 3rem 0; }
+@media (max-width: 900px) {
+  .query-help-layout { display: block; padding: 1rem; }
+  .query-help-toc { position: static; max-height: none; }
+  .query-help-toc ol { columns: 2; column-gap: 2rem; }
+  .query-help-toc li { break-inside: avoid; }
+}
+@media (max-width: 500px) { .query-help-toc ol { columns: 1; } .query-help-layout th, .query-help-layout td { padding: .4rem; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  .workspace-header, #query-help-menu, .query-help-toc, .query-help-workflow-actions, [data-help-print], [data-help-error] { display: none !important; }
+  .query-help-layout { display: block; padding: 0; color: #111; background: white; }
+  .query-help-layout a { color: #174d83; }
+  .query-help-steps > li { break-inside: avoid; }
+  .query-help-layout h2 { break-after: avoid; }
+  .query-help-layout img { max-height: 19cm; width: auto; }
+}

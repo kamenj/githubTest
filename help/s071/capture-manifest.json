@@ -1,0 +1,478 @@
+{
+  "version": 1,
+  "page": "s071-query-help.html",
+  "screenshots": [
+    {
+      "section": "start",
+      "title": "Locate the source and design grid",
+      "instruction": "The source card lists available fields. The grid below it describes the query: Field, Table, Sort, Show and Criteria. The top selector strip selects whole columns; the Field row edits their contents.",
+      "file": "01-start.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "start",
+      "title": "Apply the current design",
+      "instruction": "Scroll below the query editor and click Apply query. The status reports 32 of 32 synthetic source rows and 32 result rows. Editing the design leaves the previous result visible until you apply again.",
+      "file": "02-start.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "fields",
+      "title": "Click a source field",
+      "instruction": "Click qty in the S071_Rows source card. Desktop users can also drag a source field onto a grid column to insert before it.",
+      "file": "03-fields.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "fields",
+      "title": "Find the new occurrence",
+      "instruction": "A second Qty column appears at the right. It has its own Show, Sort and Criteria controls. Scroll horizontally if needed.",
+      "file": "04-fields.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "fields",
+      "title": "Choose a source, then set an alias",
+      "instruction": "In the new column’s Field dropdown choose UnitPrice. In the text box below it, press Enter/F2, type PriceCopy: [price], then Enter. The alias changes the output heading; the source remains price.",
+      "file": "05-fields.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "selection",
+      "title": "Select one column",
+      "instruction": "Click the ▾ selector above Qty in the top Column row. The column receives a visible selection border and its selector becomes pressed. Its accessible name identifies the column.",
+      "file": "06-selection.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "selection",
+      "title": "Select a continuous range",
+      "instruction": "Hold Shift and click the ▾ selector above Enabled. Qty, UnitPrice and Enabled are now selected. Keyboard alternative: focus a cell, Ctrl+Space, then Shift+Left/Right.",
+      "file": "07-selection.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "selection",
+      "title": "Select separate columns",
+      "instruction": "Press Escape to clear the range. Click Region’s ▾ selector, then hold Ctrl (Cmd on macOS) and click UnitPrice’s ▾ selector. Two separated columns are selected.",
+      "file": "08-selection.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "selection",
+      "title": "Deselect all columns",
+      "instruction": "Click Cancel selection or press Escape. Selected 0 confirms that no columns are selected. Clicking a selected selector again also toggles it off; Ctrl/Cmd-click toggles individual additions.",
+      "file": "09-selection.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "delete",
+      "title": "Select the columns to remove",
+      "instruction": "Select Qty, then Shift-click UnitPrice. Click Delete selected, or press Delete while the grid selection has focus. A cell text editor keeps normal text-deletion behavior.",
+      "file": "10-delete.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "delete",
+      "title": "Inspect the reduced design",
+      "instruction": "Only Region and Enabled remain. Click Undo to restore the removed columns and their query settings. A shared expression that still needs a removed operand can block deletion with an explanation.",
+      "file": "11-delete.png",
+      "width": 844,
+      "height": 933
+    },
+    {
+      "section": "delete",
+      "title": "Restore the design",
+      "instruction": "Undo restores both columns in one operation. Redo removes them again. Ctrl+Z and Ctrl+Y work while navigating the grid; inside text editors they retain native text undo/redo.",
+      "file": "12-delete.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "layout",
+      "title": "Select a column and move it earlier",
+      "instruction": "Select UnitPrice, then click Move earlier. Move later moves the selection toward the right. These explicit controls also work on touch screens.",
+      "file": "13-layout.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "layout",
+      "title": "Check the new order",
+      "instruction": "UnitPrice is now before Qty. You can also drag a desktop column by its dedicated handle. Dragging the resize divider changes width rather than order.",
+      "file": "14-layout.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "layout",
+      "title": "Widen a column",
+      "instruction": "Drag the slim divider at the right of a column selector. Width stays between 140 and 600 pixels and does not change the query or result-table widths.",
+      "file": "15-layout.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "show-sort",
+      "title": "Choose sorting and visibility",
+      "instruction": "In Qty’s Sort cell choose Descending. Uncheck Enabled’s Show checkbox. You can sort by several columns; design order determines their priority when edited.",
+      "file": "16-show-sort.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "show-sort",
+      "title": "Filter by a hidden field",
+      "instruction": "Enter True under Enabled’s Criteria and click Apply query. The result contains 21 enabled source rows, ordered by Qty descending, without displaying Enabled.",
+      "file": "17-show-sort.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "criteria",
+      "title": "Enter a criterion",
+      "instruction": "Focus the Qty Criteria cell and press Enter/F2. Type > 10, then press Enter to commit it. Clicking once only focuses a cell; Enter/F2 or double-click enters text editing.",
+      "file": "18-criteria.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "criteria",
+      "title": "Add an AND condition",
+      "instruction": "On the same Criteria row, enter True under Enabled. This means qty > 10 AND enabled = True.",
+      "file": "19-criteria.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "criteria",
+      "title": "Add an OR alternative",
+      "instruction": "Click Add OR row. In Or 1 enter < 5 under Qty and True under Enabled. The query means (qty > 10 AND enabled = True) OR (qty < 5 AND enabled = True). Remove Or 1 deletes that whole alternative.",
+      "file": "20-criteria.png",
+      "width": 844,
+      "height": 1020
+    },
+    {
+      "section": "criteria",
+      "title": "Check the expression and result count",
+      "instruction": "Apply query. This example matches 17 of 32 source rows. Expand Readable expression and query clauses to inspect parentheses and the corresponding WHERE clause.",
+      "file": "21-criteria.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "rule-editor",
+      "title": "Open a criterion’s rule editor",
+      "instruction": "Enter \"North\" under Region. Click the … button in that same Criteria cell. This edits only that cell’s condition; Edit whole expression edits the complete query filter.",
+      "file": "22-rule-editor.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "rule-editor",
+      "title": "Choose an operator and value",
+      "instruction": "In the rule choose Region, starts with (case-insensitive), and N. The operator choices depend on the field type. Click Apply criterion, or Cancel to keep the old condition. Text comparisons in this Access-style query ignore case.",
+      "file": "23-rule-editor.png",
+      "width": 1056,
+      "height": 440
+    },
+    {
+      "section": "rule-editor",
+      "title": "Combine the rule with a numeric range",
+      "instruction": "Enter >= 10 And <= 20 under Qty on the same Criteria row, then Apply query. Five North rows match the range. The equivalent Region criterion is Like \"N*\". Clear criterion in the dialog removes its entire cell condition.",
+      "file": "24-rule-editor.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "row-expression",
+      "title": "Open the row-expression editor",
+      "instruction": "With Region = \"North\" and Qty > 10 on the Criteria row, click Edit row expression in the left gutter. Use + → insert rule to add a condition, or + → insert group for parentheses.",
+      "file": "25-row-expression.png",
+      "width": 1056,
+      "height": 474
+    },
+    {
+      "section": "row-expression",
+      "title": "Add a row-level rule and apply",
+      "instruction": "Choose Enabled, equals, false. Click Apply criterion, then Apply query. The row means region = \"North\" AND qty > 10 AND enabled = False, which matches 4 source rows. On a separate Or row the row expression belongs to that alternative only.",
+      "file": "26-row-expression.png",
+      "width": 1056,
+      "height": 440
+    },
+    {
+      "section": "groups",
+      "title": "Open the whole-expression builder",
+      "instruction": "Start from Reset query and enter True under Enabled. Expand Readable expression and query clauses, then click Edit whole expression. The existing Enabled rule appears inside the root braces. Find the + insertion control after this rule.",
+      "file": "27-groups.png",
+      "width": 1056,
+      "height": 658
+    },
+    {
+      "section": "groups",
+      "title": "Insert a nested group",
+      "instruction": "Click the + after the Enabled rule to reveal two choices: insert rule and insert group (folder icon). Click Insert group at position 2 to add a parenthesized group beside the existing rule.",
+      "file": "28-groups.png",
+      "width": 1056,
+      "height": 658
+    },
+    {
+      "section": "groups",
+      "title": "Set AND outside, OR inside",
+      "instruction": "Use the + inside the new parentheses twice to insert two rules. Set the first to Qty / is greater than / 10 and the second to Qty / is less than / 5. Keep AND between Enabled and the group; choose OR between the two Qty rules. This means enabled = True AND (qty > 10 OR qty < 5).",
+      "file": "29-groups.png",
+      "width": 1056,
+      "height": 900
+    },
+    {
+      "section": "groups",
+      "title": "Apply and inspect the distributed criteria",
+      "instruction": "Click Apply expression in the dialog, then Apply query on the page. The equivalent grid repeats Enabled = True on each OR alternative. The result matches 17 source rows. Cancel in the dialog would discard the complete draft.",
+      "file": "30-groups.png",
+      "width": 844,
+      "height": 1499
+    },
+    {
+      "section": "zoom",
+      "title": "Edit a criterion in Zoom",
+      "instruction": "Focus the Qty Criteria cell and press Shift+F2, or open its cell context menu and choose Zoom. Type > 10 in the larger editor, then click Apply. Cancel or Escape keeps the previous value.",
+      "file": "31-zoom.png",
+      "width": 1056,
+      "height": 384
+    },
+    {
+      "section": "zoom",
+      "title": "Clear only the criterion",
+      "instruction": "Right-click the Qty Criteria cell, or focus it and press Shift+F10. Choose Clear Cell to remove its condition while keeping Qty in the design.",
+      "file": "32-zoom.png",
+      "width": 826,
+      "height": 810
+    },
+    {
+      "section": "zoom",
+      "title": "Cancel an invalid draft",
+      "instruction": "Typing > without a value is invalid. The error explains the problem. Correct the draft and press Enter, or press Escape to discard it. Apply query cannot use an unfinished or invalid draft.",
+      "file": "33-zoom.png",
+      "width": 844,
+      "height": 1881
+    },
+    {
+      "section": "calculations",
+      "title": "Type an alias and arithmetic expression",
+      "instruction": "Add another Qty occurrence. In its Field text box type LineTotal: [qty]*[price], then Enter. The alias appears as the result heading. Use the source name price, even though its caption is UnitPrice.",
+      "file": "34-calculations.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "calculations",
+      "title": "Apply the calculated output",
+      "instruction": "Apply query to calculate LineTotal per source row. You can Show/hide and sort this output. Filter the source fields with Criteria; direct criteria on row-scalar output are disabled. Division by zero is reported as an execution error.",
+      "file": "35-calculations.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "wildcard",
+      "title": "Add the source wildcard",
+      "instruction": "Click S071_Rows.* in the source card. A wildcard column appears at the right with its own Show control. Existing explicit columns remain, so adding the wildcard can intentionally produce repeated outputs.",
+      "file": "36-wildcard.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "wildcard",
+      "title": "Expand before editing individual fields",
+      "instruction": "Select the wildcard column, then click Expand wildcard (it may be under the toolbar’s More button). This replaces it with separate field occurrences. Direct wildcard sorting is disabled; choose an explicit field instead.",
+      "file": "37-wildcard.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "wildcard",
+      "title": "Use the expanded columns",
+      "instruction": "The wildcard becomes Region, Qty, UnitPrice and Enabled occurrences. Each can now be hidden, sorted, filtered or used with Totals. Existing compatible wildcard criteria are preserved during expansion.",
+      "file": "38-wildcard.png",
+      "width": 844,
+      "height": 948
+    },
+    {
+      "section": "totals",
+      "title": "Enable the Total row",
+      "instruction": "Check Use Totals above the source card. All included columns initially use Group By. Keeping extra Group By fields can create many smaller groups.",
+      "file": "39-totals.png",
+      "width": 844,
+      "height": 990
+    },
+    {
+      "section": "totals",
+      "title": "Choose grouping and aggregate functions",
+      "instruction": "Keep Region = Group By. Set Qty = Sum and UnitPrice = Avg. First uncheck Enabled’s Show box, then set its Total operation to Not used so it does not split groups. A shown field must have a Total operation. Numeric-only functions are disabled for nonnumeric fields.",
+      "file": "40-totals.png",
+      "width": 844,
+      "height": 1062
+    },
+    {
+      "section": "totals",
+      "title": "Read the grouped result",
+      "instruction": "Apply query. There are two result rows: North has SumOfqty 256 and AvgOfprice 3; South has SumOfqty 272 and AvgOfprice 4. The status distinguishes 32 matched source rows from 2 grouped result rows.",
+      "file": "41-totals.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "aggregate-filters",
+      "title": "Filter input records with Where",
+      "instruction": "Continue the totals query. Set Enabled’s Total operation to Where, then enter True in its Criteria. Where forces Show off. This filters the input records before Sum and Avg run.",
+      "file": "42-aggregate-filters.png",
+      "width": 844,
+      "height": 1062
+    },
+    {
+      "section": "aggregate-filters",
+      "title": "Filter groups with HAVING",
+      "instruction": "Enter > 170 under the Sum Qty column. Criteria beneath an aggregate or Group By field become HAVING. The condition means Sum(qty) > 170, rather than requiring each source qty to exceed 170.",
+      "file": "43-aggregate-filters.png",
+      "width": 844,
+      "height": 1062
+    },
+    {
+      "section": "aggregate-filters",
+      "title": "Check both stages",
+      "instruction": "Apply query. The enabled filter matches 21 source rows; HAVING leaves only South, with SumOfqty 192. North’s enabled-only sum is 160 and is excluded. Inspect the SQL view for separate WHERE and HAVING clauses.",
+      "file": "44-aggregate-filters.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "count-summary",
+      "title": "Choose Max and Count",
+      "instruction": "Keep Region = Group By. Choose Max for Qty and Count for UnitPrice. Hide Enabled, then choose Not used for it. Count(field) counts non-null field values; Count(*) in a Total Expression counts every input row.",
+      "file": "45-count-summary.png",
+      "width": 844,
+      "height": 1062
+    },
+    {
+      "section": "count-summary",
+      "title": "Read the summary values",
+      "instruction": "Apply query. Each region has 16 non-null price values. North’s maximum Qty is 31; South’s is 32. Min/Max preserve the input type; StDev and Var use sample statistics and need at least two non-null numbers. First/Last follow source-row order within the group, before result sorting.",
+      "file": "46-count-summary.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "total-expression",
+      "title": "Edit an aggregate formula",
+      "instruction": "Keep Region = Group By. For price and enabled first uncheck Show, then choose Not used. In Qty’s Total dropdown choose Expression. Enter Sum([qty]) / Count(*) in the dialog, then click Apply expression.",
+      "file": "47-total-expression.png",
+      "width": 1056,
+      "height": 383
+    },
+    {
+      "section": "total-expression",
+      "title": "Apply and reopen the formula",
+      "instruction": "The grouped output now contains average Qty computed by the formula: North 16 and South 17. Use Edit expression in the Total cell to reopen it. Cancel discards a dialog draft.",
+      "file": "48-total-expression.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "clauses",
+      "title": "Choose All query clauses",
+      "instruction": "In Expression clause select All query clauses. WHERE and HAVING use condition trees; GROUP BY and ORDER BY use ordered field lists. Scroll within the dialog to reach the lower lists. Apply expression commits all clause drafts together.",
+      "file": "49-clauses.png",
+      "width": 1056,
+      "height": 988
+    },
+    {
+      "section": "clauses",
+      "title": "Add an ordered sorting field",
+      "instruction": "Choose ORDER BY — ordered fields in Expression clause to focus just that list. Click Add field, choose [region], then DESC. Entries in this list are evaluated in order. GROUP BY has a similar field list without sort direction. Remove an entry with its Remove control; brace buttons can collapse each list independently.",
+      "file": "50-clauses.png",
+      "width": 1056,
+      "height": 509
+    },
+    {
+      "section": "clauses",
+      "title": "Apply all clause changes together",
+      "instruction": "Click Apply expression at the bottom of the dialog, then Apply query. South now precedes North because Region sorts descending. Cancel would discard all clause drafts together.",
+      "file": "51-clauses.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "sql",
+      "title": "Read the generated SQL",
+      "instruction": "Expand SQL view and editor. The current query includes WHERE [qty] > 10. Editing SQL starts a draft; apply or discard that draft before other query changes.",
+      "file": "52-sql.png",
+      "width": 844,
+      "height": 292
+    },
+    {
+      "section": "sql",
+      "title": "Apply the SQL draft",
+      "instruction": "Change > 10 to > 20 and click Apply SQL. This updates the visual criteria; click Apply query afterward to update results. Invalid SQL stays in the editor with an error.",
+      "file": "53-sql.png",
+      "width": 844,
+      "height": 292
+    },
+    {
+      "section": "sql",
+      "title": "Discard unwanted SQL changes",
+      "instruction": "Discard SQL draft / load current query restores the committed SQL. Here the committed criterion remains > 20. Query results remain at the last successful Apply query.",
+      "file": "54-sql.png",
+      "width": 844,
+      "height": 292
+    },
+    {
+      "section": "json",
+      "title": "Export the current definition",
+      "instruction": "Click Export query JSON, then scroll to Query JSON — export or reload. Copy the text into a file if you want to keep it. The definition includes fields, visibility, sorting, criteria and totals.",
+      "file": "55-json.png",
+      "width": 884,
+      "height": 170
+    },
+    {
+      "section": "json",
+      "title": "Reload the exported definition",
+      "instruction": "After Reset query, click Reload query JSON to restore and apply the JSON already in the text area. A malformed or incompatible definition reports an error and leaves the previous result visible. Reopen S07.1 for its enhanced definitions.",
+      "file": "56-json.png",
+      "width": 884,
+      "height": 934
+    },
+    {
+      "section": "phone",
+      "title": "Select separate columns on touch",
+      "instruction": "Tap Select columns to enter touch selection mode. Tap Region and UnitPrice selectors to toggle each one independently. Selected 2 confirms the selection. Cancel selection exits this mode.",
+      "file": "57-phone.png",
+      "width": 350,
+      "height": 866
+    },
+    {
+      "section": "phone",
+      "title": "Show one full-width column",
+      "instruction": "Tap Focus column, using More if needed. The same grid cells now show one column beside the row labels. This is useful when the virtual keyboard leaves little space.",
+      "file": "58-phone.png",
+      "width": 350,
+      "height": 858
+    },
+    {
+      "section": "phone",
+      "title": "Choose another focused field",
+      "instruction": "Use Focused column to switch to Qty, then edit its Criteria. Toggle Focus column again to return to the full grid. Use Apply query below the editor to refresh results.",
+      "file": "59-phone.png",
+      "width": 350,
+      "height": 858
+    }
+  ]
+}
