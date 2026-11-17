@@ -31,3 +31,20 @@ jobs:
           path: .
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published demo assets
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { readFile } from 'node:fs/promises';
+          const base = new URL(process.env.PAGE_URL);
+          const manifest = JSON.parse(await readFile('public-assets.json', 'utf8'));
+          for (const name of manifest.filter(name => !name.startsWith('.'))) {
+            const response = await fetch(new URL(name, base), { signal: AbortSignal.timeout(30000) });
+            assert.equal(response.status, 200, `${name}: HTTP ${response.status}`);
+            assert.deepEqual(Buffer.from(await response.arrayBuffer()), await readFile(name),
+              `${name}: deployed content differs`);
+          }
+          console.log(`Verified public demo assets at ${base}`);
+          NODE
